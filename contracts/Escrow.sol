@@ -3,61 +3,48 @@
 pragma solidity ^0.8.10;
 
 contract Escrow {
-
-    //transaction status
     enum EscrowStatus { Created, Locked, Released, Refunded, Dispute }
 
-    //transaction block
     struct EscrowTransaction {
         address buyer;
         address seller;
-        address arbitrator;
         uint256 amount;
         EscrowStatus status;
     }
 
+    address public arbitrator;
+    uint256 public transactionCounter;
+    mapping (uint256 => EscrowTransaction) private escrowTransactions;
 
+    event EscrowCreated(uint256 indexed transactionId, address indexed buyer, address indexed seller, uint256 amount);
+    event EscrowLocked(uint256 indexed transactionId);
+    event EscrowReleased(uint256 indexed transactionId);
+    event EscrowRefunded(uint256 indexed transactionId);
+    event EscrowDisputed(uint256 indexed transactionId);
+    event EscrowResolved(uint256 indexed transactionId, address indexed resolver, bool releasedFunds);
 
-    //keeping track of the transactions
-
-    mapping (bytes32 => EscrowTransaction) private escrowTransactions;
-
-    
-
-    //modifiers
-
-    modifier onlyBuyer(bytes32 transactionId) {
-        require(msg.sender == escrowTransactions[transactionId].buyer, "Only the buyer can perform this action.");
+    modifier onlyArbitrator() {
+        require(msg.sender == arbitrator, "Only the arbitrator can perform this action.");
         _;
     }
 
-    modifier onlySeller(bytes32 transactionId) {
-        require(msg.sender == escrowTransactions[transactionId].seller, "Only the seller can perform this action.");
-        _;
-    }
-
-    modifier onlyArbitrator(bytes32 transactionId) {
-        require(msg.sender == escrowTransactions[transactionId].arbitrator, "Only the arbitrator can perform this action.");
-        _;
-    }
-
-    modifier inStatus(bytes32 transactionId, EscrowStatus status) {
+    modifier inStatus(uint256 transactionId, EscrowStatus status) {
         require(escrowTransactions[transactionId].status == status, "Transaction is not in the required state.");
         _;
     }
 
+    constructor() {
+        arbitrator = msg.sender;
+        transactionCounter = 0;
+    }
 
-    //escrow creation function
-
-    event EscrowCreated(bytes32 indexed transactionId, address indexed buyer, address indexed seller, uint256 amount);
-
-    function createEscrow(bytes32 transactionId, address buyer, address seller, address arbitrator) external payable {
-        require(escrowTransactions[transactionId].buyer == address(0), "Transaction ID already exists.");
+    function createEscrow(address buyer, address seller) external payable onlyArbitrator {
+        uint256 transactionId = transactionCounter;
+        transactionCounter++;
 
         escrowTransactions[transactionId] = EscrowTransaction({
             buyer: buyer,
             seller: seller,
-            arbitrator: arbitrator,
             amount: msg.value,
             status: EscrowStatus.Created
         });
@@ -65,20 +52,13 @@ contract Escrow {
         emit EscrowCreated(transactionId, buyer, seller, msg.value);
     }
 
-
-    event EscrowLocked(bytes32 indexed transactionId);
-
-    function lockEscrow(bytes32 transactionId) external onlySeller(transactionId) inStatus(transactionId, EscrowStatus.Created) {
+    function lockEscrow(uint256 transactionId) external onlyArbitrator inStatus(transactionId, EscrowStatus.Created) {
         escrowTransactions[transactionId].status = EscrowStatus.Locked;
 
         emit EscrowLocked(transactionId);
     }
 
-
-
-    event EscrowReleased(bytes32 indexed transactionId);
-
-    function releaseEscrow(bytes32 transactionId) external onlyBuyer(transactionId) inStatus(transactionId, EscrowStatus.Locked) {
+    function releaseEscrow(uint256 transactionId) external onlyArbitrator inStatus(transactionId, EscrowStatus.Locked) {
         escrowTransactions[transactionId].status = EscrowStatus.Released;
 
         address payable seller = payable(escrowTransactions[transactionId].seller);
@@ -89,12 +69,7 @@ contract Escrow {
         emit EscrowReleased(transactionId);
     }
 
-
-
-
-    event EscrowRefunded(bytes32 indexed transactionId);
-
-    function refundEscrow(bytes32 transactionId) external onlySeller(transactionId) inStatus(transactionId, EscrowStatus.Locked) {
+    function refundEscrow(uint256 transactionId) external onlyArbitrator inStatus(transactionId, EscrowStatus.Locked) {
         escrowTransactions[transactionId].status = EscrowStatus.Refunded;
 
         address payable buyer = payable(escrowTransactions[transactionId].buyer);
@@ -105,22 +80,13 @@ contract Escrow {
         emit EscrowRefunded(transactionId);
     }
 
-
-
-    event EscrowDisputed(bytes32 indexed transactionId);
-
-    function initiateDispute(bytes32 transactionId) external onlyArbitrator(transactionId) inStatus(transactionId, EscrowStatus.Locked) {
+    function initiateDispute(uint256 transactionId) external onlyArbitrator inStatus(transactionId, EscrowStatus.Locked) {
         escrowTransactions[transactionId].status = EscrowStatus.Dispute;
 
         emit EscrowDisputed(transactionId);
     }
 
-
-
-
-    event EscrowResolved(bytes32 indexed transactionId, address indexed resolver, bool releasedFunds);
-
-    function resolveDispute(bytes32 transactionId, bool releaseFunds) external onlyArbitrator(transactionId) inStatus(transactionId, EscrowStatus.Dispute) {
+    function resolveDispute(uint256 transactionId, bool releaseFunds) external onlyArbitrator inStatus(transactionId, EscrowStatus.Dispute) {
         escrowTransactions[transactionId].status = EscrowStatus.Released;
 
         address payable seller = payable(escrowTransactions[transactionId].seller);
@@ -136,9 +102,7 @@ contract Escrow {
         emit EscrowResolved(transactionId, msg.sender, releaseFunds);
     }
 
-
-
-    function getEscrowStatus(bytes32 transactionId) external view returns (EscrowStatus) {
+    function getEscrowStatus(uint256 transactionId) external view returns (EscrowStatus) {
         return escrowTransactions[transactionId].status;
     }
 }
