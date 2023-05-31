@@ -68,6 +68,9 @@ Deploy on sepolia and verify. the verification link would also be sent. Example:
 yarn hardhat run scripts/deploy.js --network sepolia
 ```
 
+You can now interact with the contract through the sepolia testnet 
+Example- https://sepolia.etherscan.io/address/0xC9baB9A161201501FFd7D4cE96e8206832CD08BF#writeContract
+
 # Future plans for the project include:
 
 1. Testing: Comprehensive testing will be conducted to ensure the reliability and security of the escrow system.
