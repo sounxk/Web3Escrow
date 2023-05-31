@@ -1,33 +1,34 @@
-###web3escrow
-#Introduction
+#Web3Escrow
+---
+
+##Introduction
 
 The web3escrow project aims to provide a secure and automated escrow system for peer-to-peer marketplaces using smart contracts on the Ethereum blockchain. In traditional transactions, an escrow is a financial arrangement where a trusted third party holds funds or assets on behalf of the transacting parties until the transaction is completed.
 
 
-#Why do we need escrows?
+##Why do we need escrows?
 
 Escrows play a crucial role in mitigating risks and building trust in various transactions, particularly in online marketplaces. They ensure that buyers and sellers can safely conduct transactions by minimizing the potential for fraud, non-payment, or misrepresentation.
 
 
-#Problems with real-world escrows
+##Problems with real-world escrows
 
 While real-world escrows offer some level of security, they are not without their challenges. These challenges include:
 
-    Cost: Real-world escrow services often come with significant fees, making them expensive for small transactions.
-    Centralization: Traditional escrow services require trust in a centralized third party, which can be prone to manipulation or failure.
-    Delays: The manual nature of real-world escrows can lead to delays in the release of funds or assets, causing inconvenience for the parties involved.
-    Limited accessibility: Some geographical regions lack reliable escrow services, limiting participation in global marketplaces.
+1.Cost: Real-world escrow services often come with significant fees, making them expensive for small transactions.
+2.Centralization: Traditional escrow services require trust in a centralized third party, which can be prone to manipulation or failure.
+3.Delays: The manual nature of real-world escrows can lead to delays in the release of funds or assets, causing inconvenience for the parties involved.
+4.Limited accessibility: Some geographical regions lack reliable escrow services, limiting participation in global marketplaces.
 
-#Problem web3 escrow solves
+##Problem web3 escrow solves
 
 The web3escrow project leverages the power of blockchain technology and smart contracts to address the limitations of traditional escrow services. By using decentralized and transparent escrow contracts on the Ethereum blockchain, it offers the following benefits:
 
-    Security: The use of smart contracts ensures that funds or assets are held securely and can only be released according to predefined conditions agreed upon by the transacting parties.
-    Automation: Smart contracts enable automated execution of escrow transactions, eliminating the need for manual intervention and reducing delays.
-    Trustlessness: The reliance on smart contracts removes the need for trust in a centralized third party, providing a trustless environment for transacting parties.
-    Global Accessibility: Web3 escrow contracts are accessible to anyone with an internet connection, enabling participation in global marketplaces without geographical limitations.
+1.Security: The use of smart contracts ensures that funds or assets are held securely and can only be released according to predefined conditions agreed upon by the transacting parties.
+3.Trustlessness: The reliance on smart contracts removes the need for trust in a centralized third party, providing a trustless environment for transacting parties.
+4.Global Accessibility: Web3 escrow contracts are accessible to anyone with an internet connection, enabling participation in global marketplaces without geographical limitations.
 
-#Our approach
+##Our approach
 
 The web3escrow project implements a smart contract-based escrow system using Solidity and the Ethereum blockchain. The escrow contract holds the funds or assets in a secure manner and includes features such as dispute resolution and multi-signature transactions.
 ![contract diagram](/img/img.svg)
@@ -36,11 +37,11 @@ The web3escrow project implements a smart contract-based escrow system using Sol
 
 To run the code, you can either copy the contract and use Remix IDE. Or you can clone the repository using 
 ```
-
+git clone git@github.com:sounxk/Web3Escrow.git
 ```
 Go into the directory
 ```
-cd 
+cd Web3Escrow
 ```
 Install the dependencies running 
 ```
@@ -68,9 +69,9 @@ yarn hardhat run scripts/deploy.js --network sepolia
 
 #Future plans for the project include:
 
-    Testing: Comprehensive testing will be conducted to ensure the reliability and security of the escrow system.
-    UI: A user interface will be developed to provide a user-friendly experience for interacting with the escrow contracts.
-    Gas Optimization: The contract code will be further optimized to reduce gas costs and improve efficiency.
+1.Testing: Comprehensive testing will be conducted to ensure the reliability and security of the escrow system.
+2.UI: A user interface will be developed to provide a user-friendly experience for interacting with the escrow contracts.
+3.Gas Optimization: The contract code will be further optimized to reduce gas costs and improve efficiency.
 
 #Conclusion
 
