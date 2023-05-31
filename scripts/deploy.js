@@ -1,31 +1,36 @@
-const { ethers } = require('hardhat');
-const { verifyContract } = require('hardhat-etherscan-verify');
-require('dotenv').config();
-
-const { ETHERSCAN_API_KEY } = process.env;
+const { ethers, upgrades, run } = require('hardhat');
+const { verifyContract } = require('@nomiclabs/hardhat-etherscan');
 
 async function deployEscrowContract() {
   const [deployer] = await ethers.getSigners();
 
   console.log('Deploying Escrow contract...');
+
   const Escrow = await ethers.getContractFactory('Escrow');
   const escrow = await Escrow.deploy();
 
   await escrow.deployed();
 
   console.log('Escrow contract deployed to:', escrow.address);
+
   return escrow.address;
 }
 
 async function verifyEscrowContract(contractAddress) {
-  await verifyContract({
-    address: contractAddress,
-    contractName: 'Escrow',
-    etherscanApiKey: ETHERSCAN_API_KEY,
-    hardhatArguments: [], // Add constructor arguments if any
-  });
+  const network = await ethers.provider.getNetwork();
+  const networkName = network.name;
 
-  console.log('Escrow contract verified on Etherscan!');
+  if (networkName === 'sepolia') {
+    await run('verify:verify', {
+      address: contractAddress,
+      contract: 'contracts/Escrow.sol', // Path to your contract
+      constructorArguments: [], // Add constructor arguments if any
+    });
+
+    console.log('Escrow contract verified on Sepolia!');
+  } else {
+    console.log('Contract verification is only supported on the Sepolia network.');
+  }
 }
 
 // Usage
