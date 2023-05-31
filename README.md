@@ -52,6 +52,7 @@ You can also add hardhat with
 yarn add --dev hardhat
 ```
 Install the rest of the dependencies if necessary.
+Also add dotenv files by adding a .env and putting all the API_KEYS within it
 
 Compile the files with 
 ```
