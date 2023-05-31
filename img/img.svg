@@ -1,0 +1,186 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="311pt" height="910pt" viewBox="0.00 0.00 310.77 910.00">
+<g id="graph0" class="graph" transform="translate(7.482323965880106,857.6915435813031) scale(0.9291606742509133)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="none" points="-4,4 -4,-906 306.77,-906 306.77,4 -4,4"/>
+<g id="clust1" class="cluster" data-name="clusterEscrow">
+
+<path fill="#445773" stroke="#445773" d="M20,-178C20,-178 282.77,-178 282.77,-178 288.77,-178 294.77,-184 294.77,-190 294.77,-190 294.77,-745 294.77,-745 294.77,-751 288.77,-757 282.77,-757 282.77,-757 20,-757 20,-757 14,-757 8,-751 8,-745 8,-745 8,-190 8,-190 8,-184 14,-178 20,-178"/>
+<text text-anchor="middle" x="151.39" y="-740.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0">Escrow</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterseller">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M209.19,-93C209.19,-93 282.24,-93 282.24,-93 288.24,-93 294.24,-99 294.24,-105 294.24,-105 294.24,-158 294.24,-158 294.24,-164 288.24,-170 282.24,-170 282.24,-170 209.19,-170 209.19,-170 203.19,-170 197.19,-164 197.19,-158 197.19,-158 197.19,-105 197.19,-105 197.19,-99 203.19,-93 209.19,-93"/>
+<text text-anchor="middle" x="245.71" y="-153.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0">seller</text>
+</g>
+<g id="clust3" class="cluster" data-name="clusterbuyer">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M209.19,-8C209.19,-8 282.24,-8 282.24,-8 288.24,-8 294.24,-14 294.24,-20 294.24,-20 294.24,-73 294.24,-73 294.24,-79 288.24,-85 282.24,-85 282.24,-85 209.19,-85 209.19,-85 203.19,-85 197.19,-79 197.19,-73 197.19,-73 197.19,-20 197.19,-20 197.19,-14 203.19,-8 209.19,-8"/>
+<text text-anchor="middle" x="245.71" y="-68.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0">buyer</text>
+</g>
+<g id="clust4" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="19.32,-765 19.32,-894 280.71,-894 280.71,-765 19.32,-765"/>
+<text text-anchor="middle" x="150.02" y="-877.4" font-family="Times,serif" font-size="14.00">Legend</text>
+</g>
+<!-- Escrow.onlyArbitrator -->
+<g id="node1" class="node" pointer-events="visible" data-name="Escrow.onlyArbitrator">
+
+<polygon fill="#edad56" stroke="#1bc6a6" stroke-width="3" points="164.48,-694.54 164.48,-709.46 122.21,-720 62.44,-720 20.17,-709.46 20.17,-694.54 62.44,-684 122.21,-684 164.48,-694.54"/>
+<polygon fill="none" stroke="#1bc6a6" stroke-width="3" points="168.47,-691.42 168.47,-712.58 122.7,-724 61.95,-724 16.18,-712.58 16.18,-691.42 61.95,-680 122.7,-680 168.47,-691.42"/>
+<text text-anchor="middle" x="92.32" y="-697.8" font-family="Times,serif" font-size="14.00">onlyArbitrator</text>
+</g>
+<!-- Escrow.inStatus -->
+<g id="node2" class="node" pointer-events="visible" data-name="Escrow.inStatus">
+
+<polygon fill="#edad56" stroke="#1bc6a6" stroke-width="3" points="138.08,-632.54 138.08,-647.46 111.27,-658 73.37,-658 46.57,-647.46 46.57,-632.54 73.37,-622 111.27,-622 138.08,-632.54"/>
+<polygon fill="none" stroke="#1bc6a6" stroke-width="3" points="142.09,-629.82 142.09,-650.18 112.04,-662 72.61,-662 42.56,-650.18 42.56,-629.82 72.61,-618 112.04,-618 142.09,-629.82"/>
+<text text-anchor="middle" x="92.32" y="-635.8" font-family="Times,serif" font-size="14.00">inStatus</text>
+</g>
+<!-- Escrow.&lt;Constructor&gt; -->
+<g id="node3" class="node" pointer-events="visible" data-name="Escrow.&lt;Constructor&gt;">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="92.32" cy="-582" rx="67.55" ry="18"/>
+<text text-anchor="middle" x="92.32" y="-577.8" font-family="Times,serif" font-size="14.00">&lt;Constructor&gt;</text>
+</g>
+<!-- Escrow.createEscrow -->
+<g id="node4" class="node" pointer-events="visible" data-name="Escrow.createEscrow">
+
+<ellipse fill="#ffbdb9" stroke="brown" stroke-width="3" cx="92.32" cy="-528" rx="63.08" ry="18"/>
+<text text-anchor="middle" x="92.32" y="-523.8" font-family="Times,serif" font-size="14.00">createEscrow</text>
+</g>
+<!-- Escrow.lockEscrow -->
+<g id="node5" class="node" pointer-events="visible" data-name="Escrow.lockEscrow">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="92.32" cy="-474" rx="56.75" ry="18"/>
+<text text-anchor="middle" x="92.32" y="-469.8" font-family="Times,serif" font-size="14.00">lockEscrow</text>
+</g>
+<!-- Escrow.releaseEscrow -->
+<g id="node6" class="node" pointer-events="visible" data-name="Escrow.releaseEscrow">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="92.32" cy="-420" rx="66.6" ry="18"/>
+<text text-anchor="middle" x="92.32" y="-415.8" font-family="Times,serif" font-size="14.00">releaseEscrow</text>
+</g>
+<!-- Escrow.payable -->
+<g id="node11" class="node" pointer-events="visible" data-name="Escrow.payable">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="245.71" cy="-312" rx="41.13" ry="18"/>
+<text text-anchor="middle" x="245.71" y="-307.8" font-family="Times,serif" font-size="14.00">payable</text>
+</g>
+<!-- Escrow.releaseEscrow&#45;&gt;Escrow.payable -->
+<g id="edge1" class="edge" data-name="Escrow.releaseEscrow-&gt;Escrow.payable">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M141.56,-406.55C150.93,-402.9 160.4,-398.41 168.65,-393 190.15,-378.89 209.89,-357.51 223.87,-340.26"/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="226.51,-342.56 229.92,-332.53 221,-338.24 226.51,-342.56"/>
+</g>
+<!-- seller.transfer -->
+<g id="node12" class="node" pointer-events="visible" data-name="seller.transfer">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="245.71" cy="-119" rx="40.55" ry="18"/>
+<text text-anchor="middle" x="245.71" y="-114.8" font-family="Times,serif" font-size="14.00">transfer</text>
+</g>
+<!-- Escrow.releaseEscrow&#45;&gt;seller.transfer -->
+<g id="edge2" class="edge" data-name="Escrow.releaseEscrow-&gt;seller.transfer">
+
+<path fill="none" stroke="white" stroke-width="2" d="M147.85,-408.72C155.81,-404.91 163.16,-399.82 168.65,-393 230.22,-316.56 157.06,-263.58 197.19,-174 201.86,-163.57 209.17,-153.64 216.67,-145.15"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="219,-147.78 223.34,-138.12 213.92,-142.97 219,-147.78"/>
+</g>
+<!-- Escrow.refundEscrow -->
+<g id="node7" class="node" pointer-events="visible" data-name="Escrow.refundEscrow">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="92.32" cy="-366" rx="65.4" ry="18"/>
+<text text-anchor="middle" x="92.32" y="-361.8" font-family="Times,serif" font-size="14.00">refundEscrow</text>
+</g>
+<!-- Escrow.refundEscrow&#45;&gt;Escrow.payable -->
+<g id="edge3" class="edge" data-name="Escrow.refundEscrow-&gt;Escrow.payable">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M135.09,-351.1C155.24,-343.91 179.43,-335.28 199.96,-327.96"/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="201.1,-331.27 209.34,-324.62 198.75,-324.68 201.1,-331.27"/>
+</g>
+<!-- buyer.transfer -->
+<g id="node13" class="node" pointer-events="visible" data-name="buyer.transfer">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="245.71" cy="-34" rx="40.55" ry="18"/>
+<text text-anchor="middle" x="245.71" y="-29.8" font-family="Times,serif" font-size="14.00">transfer</text>
+</g>
+<!-- Escrow.refundEscrow&#45;&gt;buyer.transfer -->
+<g id="edge4" class="edge" data-name="Escrow.refundEscrow-&gt;buyer.transfer">
+
+<path fill="none" stroke="white" stroke-width="2" d="M147.18,-355.16C155.42,-351.3 163.04,-346.08 168.65,-339 238.11,-251.35 152.29,-191.42 197.19,-89 201.77,-78.53 209.06,-68.59 216.57,-60.11"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="218.9,-62.74 223.25,-53.07 213.82,-57.92 218.9,-62.74"/>
+</g>
+<!-- Escrow.initiateDispute -->
+<g id="node8" class="node" pointer-events="visible" data-name="Escrow.initiateDispute">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="92.32" cy="-312" rx="67.79" ry="18"/>
+<text text-anchor="middle" x="92.32" y="-307.8" font-family="Times,serif" font-size="14.00">initiateDispute</text>
+</g>
+<!-- Escrow.resolveDispute -->
+<g id="node9" class="node" pointer-events="visible" data-name="Escrow.resolveDispute">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="92.32" cy="-258" rx="68.93" ry="18"/>
+<text text-anchor="middle" x="92.32" y="-253.8" font-family="Times,serif" font-size="14.00">resolveDispute</text>
+</g>
+<!-- Escrow.resolveDispute&#45;&gt;Escrow.payable -->
+<g id="edge5" class="edge" data-name="Escrow.resolveDispute-&gt;Escrow.payable">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M146.27,-270.42C166.09,-276.98 188.19,-285.04 206.43,-292.39"/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="204.98,-295.58 215.56,-296.17 207.66,-289.11 204.98,-295.58"/>
+</g>
+<!-- Escrow.resolveDispute&#45;&gt;Escrow.payable -->
+<g id="edge6" class="edge" data-name="Escrow.resolveDispute-&gt;Escrow.payable">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M125.43,-275.09C145.49,-283.41 171.76,-293.03 194.53,-300.5" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="193.29,-303.78 203.88,-303.48 195.42,-297.11 193.29,-303.78"/>
+</g>
+<!-- Escrow.resolveDispute&#45;&gt;seller.transfer -->
+<g id="edge7" class="edge" data-name="Escrow.resolveDispute-&gt;seller.transfer">
+
+<path fill="none" stroke="white" stroke-width="2" d="M145.26,-245.34C153.71,-241.68 161.89,-236.99 168.65,-231 189.85,-212.2 181.46,-197.57 197.19,-174 203.63,-164.34 211.58,-154.52 219.12,-145.91"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="221.55,-148.44 225.65,-138.67 216.35,-143.75 221.55,-148.44"/>
+</g>
+<!-- Escrow.resolveDispute&#45;&gt;buyer.transfer -->
+<g id="edge8" class="edge" data-name="Escrow.resolveDispute-&gt;buyer.transfer">
+
+<path fill="none" stroke="white" stroke-width="2" d="M147.83,-246.21C155.7,-242.46 163.02,-237.52 168.65,-231 210.73,-182.29 168.87,-146.81 197.19,-89 202.21,-78.74 209.63,-68.85 217.12,-60.36"/>
+<polygon fill="white" stroke="white" stroke-width="2" points="219.45,-63 223.73,-53.31 214.34,-58.21 219.45,-63"/>
+</g>
+<!-- Escrow.getEscrowStatus -->
+<g id="node10" class="node" pointer-events="visible" data-name="Escrow.getEscrowStatus">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="92.32" cy="-204" rx="75.31" ry="18"/>
+<text text-anchor="middle" x="92.32" y="-199.8" font-family="Times,serif" font-size="14.00">getEscrowStatus</text>
+</g>
+<!-- key -->
+<g id="node14" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="none" stroke-width="3" points="157.32,-861 27.32,-861 27.32,-773 157.32,-773 157.32,-861"/>
+<text text-anchor="start" x="76.96" y="-842.4" font-family="Times,serif" font-size="14.00">Internal Call</text>
+<text text-anchor="start" x="73.07" y="-822.4" font-family="Times,serif" font-size="14.00">External Call</text>
+<text text-anchor="start" x="50.53" y="-802.4" font-family="Times,serif" font-size="14.00">Defined Contract</text>
+<text text-anchor="start" x="36.93" y="-782.4" font-family="Times,serif" font-size="14.00">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node15" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="none" stroke-width="3" points="272.71,-861 218.71,-861 218.71,-773 272.71,-773 272.71,-861"/>
+<text text-anchor="start" x="235.71" y="-842.4" font-family="Times,serif" font-size="14.00">   </text>
+<text text-anchor="start" x="235.71" y="-822.4" font-family="Times,serif" font-size="14.00">   </text>
+<polygon fill="#445773" stroke="none" points="233.71,-797 233.71,-817 258.71,-817 258.71,-797 233.71,-797"/>
+<text text-anchor="start" x="235.71" y="-802.4" font-family="Times,serif" font-size="14.00">   </text>
+<polygon fill="none" stroke="#e8726d" points="235.71,-779 235.71,-795 256.71,-795 256.71,-779 235.71,-779"/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge9" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M150.32,-847C182.22,-847 193.28,-847 219.8,-847"/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="219.68,-850.5 229.68,-847 219.68,-843.5 219.68,-850.5"/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge10" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M150.32,-827C182.22,-827 193.28,-827 219.8,-827" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="219.68,-830.5 229.68,-827 219.68,-823.5 219.68,-830.5"/>
+</g>
+</g>
+</svg>
